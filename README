@@ -1,0 +1,21 @@
+How to run:
+POST:
+python web_service.py in one window
+curl -X POST -d 'fragments=put_fragments_here' http://localhost:8080/assemble
+
+Fragments should be new line separated (of string fragments that are the input)
+
+
+Via command line:
+1:
+python assembleText.py
+enter your fragments
+control D to indicate done entering fragments
+
+2:
+python assembleText.py your_file_here.txt
+
+General notes:
+web_service.py contains the code that does task 2. assemble_text.py contains the code that does task 1.
+I was not able to get this to run with either the Shakespeare or Lorem Ipsum files, because it appears that these do not have a minimum overlap of 3 from each of the fragments.
+The output contains a list of partially-assembled fragments that are individually correct.
